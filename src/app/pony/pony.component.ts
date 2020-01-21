@@ -1,9 +1,10 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-pony',
   templateUrl: './pony.component.html',
-  styleUrls: ['./pony.component.css']
+  styleUrls: ['./pony.component.css'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PonyComponent implements OnInit {
  @Input() ponyModel;
