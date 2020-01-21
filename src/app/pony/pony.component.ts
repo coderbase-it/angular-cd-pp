@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-pony',
@@ -6,10 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pony.component.css']
 })
 export class PonyComponent implements OnInit {
+ @Input() ponyModel;
+
+  
 
   constructor() { }
 
   ngOnInit() {
   }
+  check() {
+    console.log('pony component view checked');
+  }
+
+    getPonyImageUrl() {
+    
+    return `https://cdn.jsdelivr.net/gh/coderbase-it/angular-cd-pp@master/src/assets/images/pony-${this.ponyModel.color}-running.gif`;
+  }
+
 
 }

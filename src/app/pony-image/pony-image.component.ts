@@ -14,6 +14,6 @@ export class PonyImageComponent implements OnInit {
   ngOnInit() {
   }
  check() {
-      console.log('image component view checked');
+      console.log('pony image component view checked');
   }
 }
