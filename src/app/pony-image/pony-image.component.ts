@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,Input,  OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-pony-image',
@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pony-image.component.css']
 })
 export class PonyImageComponent implements OnInit {
+@Input() src: string;
 
+ 
   constructor() { }
 
   ngOnInit() {
   }
-
+ check() {
+      console.log('image component view checked');
+  }
 }
