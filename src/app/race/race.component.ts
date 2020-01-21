@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./race.component.css']
 })
 export class RaceComponent implements OnInit {
-  ponies = [{ id: 1, color: 'green' }, { id: 2, color: 'orange' }];
+  ponies = [{ id: 1, color: 'green' }, { id: 2, color: 'blue' }];
   colors = ['green', 'orange', 'blue'];
 
   constructor() { }
@@ -19,11 +19,13 @@ export class RaceComponent implements OnInit {
   }
 
   changeColor() { 
-    this.ponies[0].color = this.randomColor();
-  }
+    this.ponies[0].color = this.randomColor(0, this.colors.length - 1);
+  } 
 
-  randomColor() {
-    console.log(Math.random() * (this.colors.length - 1))
-    return this.colors[Math.random() * (this.colors.length - 1)];
+  randomColor(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return this.colors[Math.floor(Math.random() * (max - min + 1)) + min];
+
 }
 }
