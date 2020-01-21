@@ -15,4 +15,8 @@ export class HelloComponent implements OnInit {
 
     
   }
+
+    check() {
+      console.log('hello component view checked');
+  }
 }
